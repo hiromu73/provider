@@ -5,6 +5,11 @@ class CountModel extends ChangeNotifier{
 
   void incrementCounter() {
     count++;
+    notifyListeners();
+  }
+
+  void testIncrementCounter() {
+    count++;
     count2--;
     notifyListeners();
   }

@@ -79,7 +79,12 @@ class MyHomePage extends StatelessWidget {
                     );
                   }
                 ),
+                Consumer<CountModel>(builder: (context, model, child) {
+                    return TextButton(onPressed: () => model.testIncrementCounter(), child: Text('test'));
+                  }
+                )
               ],
+
             ),
           ),
         floatingActionButton: Consumer<CountModel>(builder: (context, model, child)
@@ -90,6 +95,7 @@ class MyHomePage extends StatelessWidget {
               child: const Icon(Icons.add),
             );
           }
+
         ),
     );
   }
